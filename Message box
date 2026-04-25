@@ -1,0 +1,42 @@
+import tkinter as tk
+from tkinter import messagebox
+
+def calculate():
+    try:
+        # Marks input
+        m1 = float(e1.get())
+        m2 = float(e2.get())
+        m3 = float(e3.get())
+        
+        total = m1 + m2 + m3
+        per = (total / 300) * 100
+        
+        if per >= 80: grade = "A+"
+        elif per >= 60: grade = "A"
+        elif per >= 40: grade = "B"
+        else: grade = "Fail"
+        
+        result_label.config(text=f"Total: {total} | Percentage: {per:.2f}% | Grade: {grade}")
+    except ValueError:
+        messagebox.showerror("Error", "Please enter valid numbers!")
+
+# UI Setup
+root = tk.Tk()
+root.title("MR. PANDEYBHAI - Grade Calculator")
+root.geometry("400x300")
+
+tk.Label(root, text="C Programming:").pack(pady=5)
+e1 = tk.Entry(root); e1.pack()
+
+tk.Label(root, text="Web Development:").pack(pady=5)
+e2 = tk.Entry(root); e2.pack()
+
+tk.Label(root, text="Mathematics:").pack(pady=5)
+e3 = tk.Entry(root); e3.pack()
+
+tk.Button(root, text="Calculate Result", command=calculate, bg="blue", fg="white").pack(pady=20)
+result_label = tk.Label(root, text="", font=("Arial", 12, "bold"))
+result_label.pack()
+
+root.mainloop()
+
