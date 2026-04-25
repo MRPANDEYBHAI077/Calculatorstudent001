@@ -1,0 +1,22 @@
+# Student Grade Calculator (GUI)
+
+## 📌 About the Project
+This is a desktop-based application developed to help students calculate their total marks, percentage, and final grade quickly. Built with Python and Tkinter.
+
+## 🚀 Features
+- User-friendly Graphical Interface.
+- Real-time percentage calculation.
+- Error handling for invalid inputs.
+
+## 🛠️ Technologies Used
+- **Language:** Python 3.x
+- **Library:** Tkinter (Internal Python Library)
+
+## 📸 How it Works
+1. Enter marks for 3 subjects.
+2. Click on the 'Calculate Result' button.
+3. View your total marks, percentage, and grade instantly!
+
+---
+Developed by **MR. PANDEYBHAI**
+
